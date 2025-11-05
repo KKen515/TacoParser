@@ -75,7 +75,7 @@ namespace LoggingKata
            
             //The two farthest Taco Bell locations and their distance in miles.
 
-            Console.WriteLine($"The two farthest {tacoBell1.GetType().Name}'s are {tacoBell1.Name} and {tacoBell2.Name}");
+            Console.WriteLine($"The two farthest Taco Bells are {tacoBell1.Name} and {tacoBell2.Name}");
             Console.WriteLine($"The total distance is {Math.Round((finalDistance * metersToMiles), 2)} miles.");
 
 
