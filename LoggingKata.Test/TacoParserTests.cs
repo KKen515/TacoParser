@@ -51,20 +51,18 @@ namespace LoggingKata.Test
             Assert.Equal(expected, actual);
         }
 
-
-        //TODO: Create a test called ShouldParseLatitude
-
+        
         [Theory]
-        [InlineData("31.570771,-84.10353,Taco Bell Albany...",  -84.10353)]
-        [InlineData("32.072974,-84.222921,Taco Bell Americu...",  -84.222921)]
-        [InlineData("34.795116,-86.97191,Taco Bell Athens...",  -86.97191)]
-        [InlineData("33.470013,-86.816966,Taco Bell Birmingham...", -86.816966)]
-        [InlineData("33.652223,-86.819279,Taco Bell Gardendal...",  -86.819279)]
-        [InlineData("33.24722,-84.273798,Taco Bell Griffi...", -84.273798)]
-        [InlineData("33.692266,-84.091365,Taco Bell Lithonia...", -84.091365 )]
-        [InlineData("33.606589,-85.826812,Taco Bell Oxfor...",  -85.826812)]
-        [InlineData("33.569202,-84.540661,Taco Bell Union Cit...",  -84.540661)]
-        [InlineData("34.272015,-85.229599,Taco Bell Rome...", -85.229599)]
+        [InlineData("31.570771,-84.10353,Taco Bell Albany...",  31.570771)]
+        [InlineData("32.072974,-84.222921,Taco Bell Americu...",  32.072974)]
+        [InlineData("34.795116,-86.97191,Taco Bell Athens...",  34.795116)]
+        [InlineData("33.470013,-86.816966,Taco Bell Birmingham...", 33.470013)]
+        [InlineData("33.652223,-86.819279,Taco Bell Gardendal...",  33.652223)]
+        [InlineData("33.24722,-84.273798,Taco Bell Griffi...", 33.24722)]
+        [InlineData("33.692266,-84.091365,Taco Bell Lithonia...", 33.692266)]
+        [InlineData("33.606589,-85.826812,Taco Bell Oxfor...",  33.606589)]
+        [InlineData("33.569202,-84.540661,Taco Bell Union Cit...",  33.569202)]
+        [InlineData("34.272015,-85.229599,Taco Bell Rome...", 34.272015)]
 
 
         public void ShouldParseLatitude(string line, double expected)
@@ -75,7 +73,7 @@ namespace LoggingKata.Test
             
             //Act
             
-            var actual = tacoParser.Parse(line).Location.Longitude;
+            var actual = tacoParser.Parse(line).Location.Latitude;
             
             //Actual
             
